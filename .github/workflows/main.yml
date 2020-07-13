@@ -1,0 +1,13 @@
+name: Build and Deploy
+
+on:
+  push:
+    branches: master
+
+jobs:
+  build-and-deploy:
+    name: Build and deploy Gatsby site
+    runs-on: ubuntu-latest
+    steps:
+      - name: Initial test
+        run: echo "Initial test run okay"
