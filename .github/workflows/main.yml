@@ -28,3 +28,9 @@ jobs:
       
       - name: Verify build
         run: ls -la public
+      
+      - name: Setup SSH
+        run: |
+          mkdir -p ~/.ssh/
+          echo "${{ secrets.ssh_private_key }}" > ~/.ssh/deploy_key
+          ls -l ~./ssh
