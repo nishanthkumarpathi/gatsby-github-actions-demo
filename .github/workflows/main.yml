@@ -34,4 +34,4 @@ jobs:
           mkdir -p ~/.ssh/
           echo "${{ secrets.ssh_private_key }}" > ~/.ssh/deploy_key
           sudo chmod 600 ~/.ssh/deploy_key
-          ls -l ~./ssh
+          sudo ls -l ~./ssh
