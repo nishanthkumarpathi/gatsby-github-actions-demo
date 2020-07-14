@@ -37,4 +37,4 @@ jobs:
           ssh-keyscan -H "${{ secrets.host }}" > ~/.ssh/known_hosts
       
       - name: SFTP upload
-        run: sftp -i ~/.ssh/deploy_key ${{ secrets.deploy_user }}@${{ secrets.host }}/${{ secrets.destination_path }} <<< $'put public/*'
+        run: sftp -i ~/.ssh/deploy_key ${{ secrets.deploy_user }}@${{ secrets.host }}//${{ secrets.destination_path }} <<< $'put public/*'
